@@ -1,0 +1,132 @@
+.navbar{
+  background: rgba(0, 0, 0, 0.5);
+  position:absolute !important;
+  z-index: 3 !important;
+  width: 100%;
+  transition: 0.5s;
+  padding: 0 1rem!important;
+}
+.navbar.active{
+  background-color: rgb(0, 0, 0);
+  top: 0 !important;
+  position: fixed !important;
+  transition: .5s;
+}
+.navbar-logo{
+  width: 170px; 
+}
+
+.logo{
+  float: left;
+  padding-left: 70px;
+}
+.navbar-content{
+  float: right;
+  margin-right: 70px;
+  margin-bottom: 0;
+  list-style: none;
+  position: relative;
+  transition: 0.7s;
+}
+
+.navbar-list{
+  display: inline-block;
+  margin: 0 5px;
+}
+.navbar-link:hover{
+  color: #fff;
+  transform: scale(1.1);
+  transition: .7s;
+}
+.navbar-link{
+  color: white;
+  line-height: 60px;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 4px 12px;
+  display: block;
+}
+.navbar::after{
+  content: '';
+  display: none !important;
+}
+.icon{
+  display: none;
+}
+:root{
+  --primary: #1888ff;
+}
+.btn1{
+  width: 170px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: white;
+  background-color: var(--primary);
+  margin: 0 0.7em;
+}
+.btn1:hover {
+  padding: 6px 18px;
+  transition: all 0.3s ease-out;
+  border-radius: 4px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  transform: scale(1.1); 
+}
+@media (max-width: 986px) {
+  .navbar{
+    background-color: black;
+    position: initial;
+    padding: 0 !important;
+    transition: .9s;
+  }
+  .navbar-content{
+    width: 100% !important;
+    float: left !important;
+    transition: 0.8s !important;
+    margin: 0;
+
+  }
+  .navbar-logo{
+    width: 150px; 
+  }
+  .navbar-link{
+    font-size: 16px;
+    padding-left: 2rem;
+  }
+  .navbar .logo{
+    padding-left: 40px;
+    width: 100%;
+  }
+  .navbar-content{
+    display: none;
+  }  
+  .btn1{
+    margin: 1em;
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 40px;
+    line-height: 80px;
+    cursor: pointer;
+    font-size: 35px;
+    top: 0;
+  }
+  [id^=btn]:checked + .navbar-content{
+    display: block !important;
+  }
+  .navbar-list{
+    display: block;
+  }
+  .navbar-link:hover{
+    box-shadow: none;
+    color: #1888ff;
+    transform: scale(1);
+    transition: none;
+  }
+}

@@ -1,0 +1,35 @@
+.img-portada{
+    width: 100%;
+    height: 660px;
+}
+.imgport{
+    width: 100%;
+    height: 100%;
+    transition: .7s;
+}
+.carousel-caption{
+    top: 45% !important;
+    right: 40% !important;
+    z-index: 1 !important;
+    width: auto !important;
+    left: initial !important;
+}
+.carousel-caption > h3{
+    font-size: 60px;
+    top: 50px;
+    font-family:'Roboto' !important;
+}
+
+.carousel-caption > h3:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 986px) {
+    .img-portada{
+        height: 400px;
+    }
+    .carousel-caption > h3{
+        font-size: 30px;
+        transition: 1s all;
+    }
+
+}

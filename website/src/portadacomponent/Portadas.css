@@ -1,0 +1,31 @@
+.portadacomponent{
+    background: url('../components/imagenes/perfil.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    position: relative;
+    padding: 1rem;
+    min-height: 400px;    
+    background-attachment: fixed;
+}
+
+.portadacomponent > h3{
+    top: 50%;
+    position: absolute;
+    left: 130px;
+    font-size: 35px;
+    transition: all .9s;
+}
+
+@media screen and (max-width: 986px) {
+    .portadacomponent{
+        min-height: 300px;
+    }
+    .portadacomponent > h3{
+        transition: all .9s;
+        top: 45%;
+        left: 30px;
+        font-size: 20px;
+    }
+
+}
