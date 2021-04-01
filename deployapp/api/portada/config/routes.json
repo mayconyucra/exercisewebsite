@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/portada",
+      "handler": "portada.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/portada",
+      "handler": "portada.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/portada",
+      "handler": "portada.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

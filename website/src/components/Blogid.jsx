@@ -7,7 +7,7 @@ const Noticiaid = () => {
     const [noticiap, setNoticiap] = useState([]);
     useEffect(() => {
         const getNoticiap = async () =>{
-        const getn = await fetch(`http://localhost:1337/noticias/${id}`)
+        const getn = await fetch(`http://localhost:1337/blogs/${id}`)
         const data1 = await getn.json()
         setNoticiap(data1)
     }
@@ -16,9 +16,9 @@ const Noticiaid = () => {
 
     return (
         <div>
-            <h1>{noticiap.titulo}</h1>
-            <p>{noticiap.descripcion}</p>
-            <p>{noticiap.fecha}</p>
+            <h1>{noticiap.tituloblog}</h1>
+            <p>{noticiap.descripcionblog}</p>
+            <p>{noticiap.fechablog}</p>
         </div>
     )
 }

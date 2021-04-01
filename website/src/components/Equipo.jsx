@@ -11,31 +11,36 @@ const Docentes = () => {
 
     //llamado a la api del personal
     const obtenerDatos = async () => {
-        const data = await fetch('http://localhost:1337/docentes')
+        const data = await fetch('http://localhost:1337/teams')
         const users = await data.json()
         setEquipo(users)
     }
     return ( 
         <>
         <Portadas title ="Conoce a Nuestro Team"/>
-            <div className="containerd">
-                <ul className="listd"> 
-                    {
-                equipo.map( item => (
-                    <li key={item.id}>
-                        <div className="content">
-                            <div className="card">
-                                <div className="firstinfo">
-                                    <img src={`http://localhost:1337${item.perfil[0].url}`} alt={item.nombre}/>                        
-                                    <div className="profileinfo">
-                                        <h1>{item.nombre}</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>))}
+<div class="container">
+    <div class="row">
+    { equipo.map( item => (
+        <div key={item.id} class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="our-team">
+                <div class="picture">
+                    <img class="img-fluid" src={`http://localhost:1337${item.perfil.url}`} alt={item.nombre}/>
+                </div>
+                <div class="team-content">
+                    <h3 class="name">{item.nombre}</h3>
+                    <h4 class="title">{item.cargo}</h4>
+                </div>
+                <ul class="social">
+                    <li><a href={item.url} class="fa fa-facebook" aria-hidden="true"></a></li>
                 </ul>
             </div>
+        </div>
+    ))}
+    </div>
+</div>
+        
+
+
         </>
 )
 }

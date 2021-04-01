@@ -50,7 +50,7 @@ export class Noticias extends PureComponent {
 
     getData() {
         axios
-            .get(`http://localhost:1337/noticias`)
+            .get(`http://localhost:1337/blogs`)
             .then(res => {
 
                 var reverse = res.data;
@@ -78,15 +78,15 @@ export class Noticias extends PureComponent {
           this.state.tableData.map(tdata => (
 
         <div class="col-md-4" style={{marginBottom:'20px'}} key={tdata.id}>
-          <Link to={`/noticias/${tdata.id}`}>
+          <Link to={`/blog/${tdata.id}`}>
           <div style={{background: '#ffffff',borderRadius: '5px',boxShadow:'0px 0px 14px 0px rgb(109,118,128)'}}>
-            <div style={{height: '221px'}}><img class="img-fluid d-xl-flex justify-content-xl-center align-items-xl-center" src={`http://localhost:1337${tdata.imagen.url}`} style={{width:'100%', height:'230px'}} alt="xd" /></div>
+            <div style={{height: '221px'}}><img class="img-fluid d-xl-flex justify-content-xl-center align-items-xl-center" src={`http://localhost:1337${tdata.portadablog.url}`} style={{width:'100%', height:'230px'}} alt="xd" /></div>
               <div>
-                <h3 class="d-xl-flex m-auto justify-content-xl-center" style={{paddingTop:'38px', width:'287px', textAlign:'left', paddingLeft:'0', color:'#1888ff'}}>{tdata.titulo}</h3>
+                <h3 class="d-xl-flex m-auto justify-content-xl-center" style={{paddingTop:'38px', width:'287px', textAlign:'left', paddingLeft:'0', color:'#1888ff'}}>{tdata.tituloblog}</h3>
                 <div>
                   <p class="mx-auto" style={{fontSize:'0.86em', width:'330px', paddingTop:'9px'}}></p>
                 </div>
-                <p class="mx-auto" style={{fontSize: '0.75em',width: '332px', paddingBottom: '17px',color:'#1888ff'}}>Fecha de Publicaión: {tdata.fecha}</p>
+                <p class="mx-auto" style={{fontSize: '0.75em',width: '332px', paddingBottom: '17px',color:'#1888ff'}}>Fecha de Publicaión: {tdata.fechablog}</p>
             </div>
           </div></Link>
         </div>                       

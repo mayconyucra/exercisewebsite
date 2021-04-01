@@ -23,7 +23,7 @@ const Carrusel = () => {
     const obtenerPortada = async() =>{
         const data = await fetch('http://localhost:1337/portada')
         const images = await data.json()
-        setPortada(images.portadaprincipal) 
+        setPortada(images.portada) 
     }
 
     const [activeIndex, setActiveIndex] = useState(0);
