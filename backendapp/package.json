@@ -1,5 +1,5 @@
 {
-  "name": "deployapp",
+  "name": "backendapp",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -19,15 +19,13 @@
     "strapi-plugin-users-permissions": "3.5.4",
     "strapi-plugin-email": "3.5.4",
     "strapi-plugin-upload": "3.5.4",
-    "strapi-connector-bookshelf": "3.5.4",
-    "knex": "0.21.18",
-    "mysql": "2.18.1"
+    "strapi-connector-mongoose": "3.5.4"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "1f74e3c5-d3d6-4e23-9a76-06dc3e611184"
+    "uuid": "96fa2724-e034-4b4d-b107-3d56874d741e"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
