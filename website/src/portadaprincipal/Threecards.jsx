@@ -11,7 +11,7 @@ const Threecards = () => {
     }, []);
 
     const getThreecards = async() =>{
-      const apicard = await fetch('http://localhost:1337/blogs')
+      const apicard = await fetch('https://devmaydenheroku.herokuapp.com/blogs')
       const jasoncard = await apicard.json()
       const reverse = jasoncard.slice(-3).reverse()
       setThreecard(reverse)
@@ -29,7 +29,7 @@ const Threecards = () => {
               threecard.map(index =>(
                 <section className="cardnotice" key={index.id}>
                   <Link className="linkcard" to={`/blog/${index.id}`}>
-                    <div className="imgcard"><img className="cardportada" src={`http://localhost:1337${index.portadablog.url}`} alt=""/></div>
+                    <div className="imgcard"><img className="cardportada" src={`https://devmaydenheroku.herokuapp.com${index.portadablog.url}`} alt=""/></div>
                     <div className="titlecard"><h3>{index.tituloblog}</h3></div>
                     <div className="datecard"><IoCalendarOutline className="iconcalendarcards"/> {index.fechablog}</div>
                   </Link>

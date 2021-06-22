@@ -9,7 +9,6 @@ import Navbar from './portadaprincipal/Navbar.jsx';
 import Carrusel from './portadaprincipal/Carrusel.jsx'
 import Threecards from './portadaprincipal/Threecards.jsx'
 import Animation from './portadaprincipal/Animation';
-import Onecomunicado from './portadaprincipal/Onecomunicado';
 import Footer from './portadaprincipal/Footer.jsx'
 
 import Blog from './components/Blog.jsx';
@@ -20,7 +19,7 @@ import Equipo from './components/Equipo.jsx'
 import Contacto from './components/Contacto';
 function App() { 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Header/>
       <Navbar/>
         <Switch>   
@@ -28,7 +27,6 @@ function App() {
             <Carrusel/>
             <Threecards/>
             <Animation/>
-            <Onecomunicado/>
           </Route>
 
           <Route path="/blog/:id">

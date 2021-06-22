@@ -7,7 +7,7 @@ const Noticiaid = () => {
     const [noticiap, setNoticiap] = useState([]);
     useEffect(() => {
         const getNoticiap = async () =>{
-        const getn = await fetch(`http://localhost:1337/blogs/${id}`)
+        const getn = await fetch(`https://devmaydenheroku.herokuapp.com/blogs/${id}`)
         const data1 = await getn.json()
         setNoticiap(data1)
     }

@@ -21,7 +21,7 @@ const Carrusel = () => {
     //api de imagenes silde
 
     const obtenerPortada = async() =>{
-        const data = await fetch('http://localhost:1337/portada')
+        const data = await fetch('https://devmaydenheroku.herokuapp.com/portada')
         const images = await data.json()
         setPortada(images.portada) 
     }
@@ -61,7 +61,7 @@ const Carrusel = () => {
           key={item.id}
           className="img-portada"
         >
-          <img src={`http://localhost:1337${item.url}`} className="imgport" alt="portada"/>
+          <img src={`https://devmaydenheroku.herokuapp.com${item.url}`} className="imgport" alt="portada"/>
           <CarouselCaption className="carousel-caption" captionHeader={item.caption} captionText={''}/>
         </CarouselItem>
       )

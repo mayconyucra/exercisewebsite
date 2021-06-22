@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
 import Portadas from '../portadacomponent/Portadas';
-
 const Lineas = () => {
     useEffect(() => {
         document.title= `Nosotros | DevMayden`
@@ -9,6 +8,7 @@ const Lineas = () => {
     return (
         <>
         <Portadas title="Nosotros"/>
+       
         </>
     )
 }
